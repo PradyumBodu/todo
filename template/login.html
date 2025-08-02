@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ragister</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+  <div class="mb-3">
+    <label class="form-label">username</label>
+    <input type="text" class="form-control" name="username" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+  <div class="mb-3 form-check">
+    <a href="{% url 'ragister' %}">Ragister</a>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ragister</title>
+</head>
+<body>
+    <form action="{% url 'ragister'  %}" method="POST" style="width: 500px; margin: auto; margin-top: 100px;">
+        {% csrf_token %}
+        {{form.as_p}}        
+        <button type="submit" class="btn btn-success m-2"> Ragister</button>
+    </form>
+</body>
+</html>
